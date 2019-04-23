@@ -85,7 +85,7 @@ void Universe::add(Map object, int status)
 	int x = 0, y = 0;
 	if (status == 1 || status == 2)
 	{
-		cout << "  Пожалуйста, введите координаты: \n  x: ";
+		cout << "  ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , ГўГўГҐГ¤ГЁГІГҐ ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ»: \n  x: ";
 		cin >> y;
 		y = y - 1;
 		cout << "  y: ";
@@ -113,7 +113,7 @@ void Universe::add(Map object, int status)
 	if (status == 3)
 	{
 		int n = 0;
-		cout << "Введите количество рандомных клеток: ";
+		cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г°Г Г­Г¤Г®Г¬Г­Г»Гµ ГЄГ«ГҐГІГ®ГЄ: ";
 		cin >> n;
 		int a = 20, b = 40;
 		srand(time(NULL));
@@ -225,7 +225,7 @@ void Universe::test()
 	while (1)
 	{
 		if (letter == 0)
-			cout << "Нажмите z, для ввода данных(координаты клеток),\nh - координаты дыр;\nИли r для рандомного расставления координат и количества\ny - чтобы убрать данную надпись, k - чтобы вернуть";
+			cout << "ГЌГ Г¦Г¬ГЁГІГҐ z, Г¤Г«Гї ГўГўГ®Г¤Г  Г¤Г Г­Г­Г»Гµ(ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» ГЄГ«ГҐГІГ®ГЄ),\nh - ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» Г¤Г»Г°;\nГ€Г«ГЁ r Г¤Г«Гї Г°Г Г­Г¤Г®Г¬Г­Г®ГЈГ® Г°Г Г±Г±ГІГ ГўГ«ГҐГ­ГЁГї ГЄГ®Г®Г°Г¤ГЁГ­Г ГІ ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ \ny - Г·ГІГ®ГЎГ» ГіГЎГ°Г ГІГј Г¤Г Г­Г­ГіГѕ Г­Г Г¤ГЇГЁГ±Гј, k - Г·ГІГ®ГЎГ» ГўГҐГ°Г­ГіГІГј";
 		A.newshow();
 		NewBirthAndDeath(A);
 		button = (char)_getch();
@@ -238,156 +238,3 @@ void Universe::test()
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//#include <iostream>
-//#include <fstream>
-//#include <string>
-//#include <sstream>
-//#include <random>
-//#include <ctime>
-//#include <conio.h>
-//#include "Universe.h"
-//
-//
-//using namespace std;
-//
-//const int UniverseSize = 25; //размер сетки
-//
-//void printUniverse(bool Universe1[UniverseSize + 1][UniverseSize + 1]);
-//void determineState(bool Universe1[UniverseSize + 1][UniverseSize + 1]); //определение положения клетоk
-//
-//int main()
-//{
-//	srand(time(NULL));
-//	bool Universe1[UniverseSize + 1][UniverseSize + 1] = {};
-//	int x, y, n;
-//	//string nc, start;
-//
-//	/*cout << "Enter the number of cells, or 'r' for the entry of random cells: ";
-//	cin >> nc;
-//	cout << endl;*/
-//
-//	/*if (nc == "r")
-//	{*/
-//	int kol = 100;
-//	//cout << "input number of random cells: ";
-//	//cin >> kol;
-//	for (int i = 0; i < kol; i++)
-//	{
-//		x = rand() % 24;
-//		y = rand() % 24;
-//		Universe1[x][y] = true;
-//	}
-//	printUniverse(Universe1);
-//	//}
-//
-//	//else
-//	//{
-//	//	for (int i = 0; i < stoi(nc); i++) //распознавание координат, введенных пользователем
-//	//	{
-//	//		cout << stoi(nc) << "Enter the coordinates of cell " << i + 1 << " : ";
-//	//		cin >> x >> y;
-//	//		Universe1[x][y] = true;
-//	//		printUniverse(Universe1);
-//	//	}
-//	//}
-//	/*cout << "Start the game ? (y/n)" << endl;
-//	cin >> start;
-//	if (start == "y" || start == "Y")
-//	{*/
-//	while (true)
-//	{
-//		printUniverse(Universe1);
-//		determineState(Universe1);
-//		system("cls");
-//	}
-//	//}
-//
-//
-//
-//
-//	_getch();
-//}
-//
-//void printUniverse(bool Universe1[UniverseSize + 1][UniverseSize + 1]) { //процесс создания вселенной с живыми/мертвыми клетками
-//	for (int a = 1; a < UniverseSize; a++)
-//	{
-//		for (int b = 1; b < UniverseSize; b++)
-//		{
-//			if (Universe1[a][b] == true)
-//			{
-//				cout << " O "; //ожившая клетка
-//			}
-//			else
-//			{
-//				cout << " . ";//мертвая клетка
-//			}
-//			if (b == UniverseSize - 1)
-//			{
-//				cout << endl;
-//			}
-//		}
-//	}
-//}
-//
-//
-//
-//void determineState(bool Universe1[UniverseSize + 1][UniverseSize + 1]) { // происходит определение мертвых и живых точек; процедура рождения и смерти клеток
-//	bool Universe2[UniverseSize + 1][UniverseSize + 1] = {};
-//
-//	for (int a = 0; a < UniverseSize; a++)
-//	{
-//		for (int b = 0; b < UniverseSize; b++)
-//		{
-//			Universe2[a][b] = Universe1[a][b];
-//		}
-//	}
-//
-//	for (int a = 1; a < UniverseSize; a++)//оживление клеток 
-//	{
-//		for (int b = 1; b < UniverseSize; b++)
-//		{
-//			int alive = 0;
-//			for (int c = -1; c < 2; c++)
-//			{
-//				for (int d = -1; d < 2; d++)
-//				{
-//					if (!(c == 0 && d == 0))
-//					{
-//						if (Universe2[a + c][b + d])
-//						{
-//							++alive;
-//						}
-//					}
-//				}
-//			}
-//			if (alive < 2) //если вокруг живых клеток меньше 2, то она умирает
-//			{
-//				Universe1[a][b] = false;
-//			}
-//			else if (alive == 3) //если вокруг три живые клетки, то живет 
-//			{
-//				Universe1[a][b] = true;
-//			}
-//			else if (alive > 3)// если вокруг живых - больше трех, то клетка умирает
-//			{
-//				Universe1[a][b] = false;
-//			}
-//		}
-//	}
-//}
